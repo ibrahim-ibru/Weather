@@ -1,4 +1,3 @@
-
 function getWeather() {
 
     document.getElementById("inp").addEventListener("change", (e) => {
@@ -29,7 +28,7 @@ function getWeather() {
         </div>
         `
             document.getElementById("weather-display").innerHTML = str
-            document.getElementById("weather-display").style.backgroundImage = `url("/images/${icon}.jpg")`
+            document.querySelector("body").style.backgroundImage = `url("/images/${icon}.jpg")`
             document.getElementById("inp").value = ""
         })
 
@@ -43,7 +42,6 @@ function tempConv(temp) {
 }
 
 function sunTime(timestamp) {
-
     const date = new Date(timestamp * 1000); // Multiply by 1000 to convert to milliseconds
     return date.toLocaleString().substring(10, 15)
 }
