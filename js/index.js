@@ -28,7 +28,7 @@ function getWeather() {
         </div>
         `
             document.getElementById("weather-display").innerHTML = str
-            document.querySelector("body").style.backgroundImage = `url("/images/${icon}.jpg")`
+            document.querySelector("body").style.backgroundImage = `url("./images/${icon}.jpg")`
             document.getElementById("inp").value = ""
         })
 
